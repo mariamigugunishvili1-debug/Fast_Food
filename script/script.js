@@ -34,7 +34,6 @@ document.addEventListener("DOMContentLoaded", function () {
 document.addEventListener("DOMContentLoaded", function () {
   const btn = document.getElementById("scrollTopBtn");
 
-  // Scroll-ზე გამოჩნდეს / გაქრეს ღილაკი
   window.addEventListener("scroll", function () {
     if (window.scrollY > 200) {
       btn.style.display = "block";
@@ -43,7 +42,6 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   });
 
-  // ღილაკზე დაჭერისას ზემოთ დაბრუნება
   btn.addEventListener("click", function () {
     window.scrollTo({
       top: 0,
@@ -53,15 +51,14 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 
-// შემთხვევით აირჩიოს
+// Random item
 const menuItems = [
   "Margherita Pizza New", "Crispy Fried Chicken", "Black Pepper Burger",
   "Chinese Pasta", "Ruti With Beef Slice", "Shroom Bacon Burger", "Roll Shaped Cigar Samosa"
 ];
 
-// შემთხვევითი პროდუქტების გენერატორი
 function getRandomOrder() {
-  const count = Math.floor(Math.random() * 3) + 1; // 1-3 პროდუქტი
+  const count = Math.floor(Math.random() * 3) + 1; 
   const order = [];
   while (order.length < count) {
     const item = menuItems[Math.floor(Math.random() * menuItems.length)];
@@ -70,7 +67,6 @@ function getRandomOrder() {
   return order.join(", ");
 }
 
-// API მოთხოვნა მომხმარებლებისთვის
 fetch('https://randomuser.me/api/?results=5')
   .then(response => response.json())
   .then(data => {
@@ -183,5 +179,6 @@ function validateEmail(email) {
   const re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
   return re.test(String(email).toLowerCase());
 }
+
 
 
