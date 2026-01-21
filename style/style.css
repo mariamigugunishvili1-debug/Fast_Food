@@ -1760,51 +1760,8 @@ ul li {
     .footertxt p {
         margin-bottom: 10px;
     }
-}
-
-
-.burger {
-    font-size: 26px;
-    cursor: pointer;
-}
-
-/* Dropdown menu */
-.menu {
-    max-height: 0;
-    overflow: hidden;
-    background: #fff;
-    transition: max-height 0.35s ease;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-}
-
-.menu.active {
-    max-height: 300px;
-}
-
-.menu ul {
-    list-style: none;
-    padding: 20px 0;
-}
-
-.menu ul li {
-    text-align: center;
-    padding: 15px 0;
-}
-
-.menu ul li a {
-    text-decoration: none;
-    color: #000;
-    font-size: 18px;
-}
-
-nav ul li a {
-    color: white;
-}
-
-.fa-bars {
-    color: green;
-}
-
-.fa-xmars {
-    color: green;
+    #scrollTopBtn {
+        width: 50px;
+        height: 50px;
+    }
 }
